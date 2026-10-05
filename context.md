@@ -1,4 +1,3 @@
-Kết luận: Actor đủ, nhưng từ ngữ + chiều luồng chưa chuẩn. Chưa dùng được.
 1. Tên actor sai ngữ pháp
 1. System Schedule -> sai. Schedule là thời khóa biểu / động từ xếp lịch. Phải là System Scheduler - hệ thống lập lịch.
 2. Administrator -> quá chung. Trong hệ thống của bạn là System Administrator phân biệt với Accountant, Warehouse Operator. Để Administrator sẽ bị hỏi là admin gì.
@@ -31,4 +30,6 @@ d. Từ quá chung, không kiểm được với hệ thống:
 3. Thiếu chiều về cho Customer: có Cancellation/Return Request đi mà không có Return Authorization / Refund Status về. Chỉ có Order Confirmation, Payment Status Information, Shipment Tracking Information.
 4. Cụm Accountant ở dưới 5 mũi tên chập vào nhau: Invoice Request, COD payment request đi lên, Invoice Information, Payment Information, COD payment Information đi xuống. Không phân biệt được hóa đơn bán hàng vs đối soát COD. Thực tế cần chỉ 2 luồng: Invoice Generation Request -> và <- Sales Invoice & COD Settlement Data.
 5. POS chỉ có vào/ra order, thiếu luồng đồng bộ tồn kho / catalog cho bán omni-channel.
+
+
 Sửa tối thiểu: System Schedule -> System Scheduler, Administrator -> System Administrator, thống nhất POS / Sales System, viết hoa lại 4 nhãn COD..., Payment report, tách Cancellation/Return, đổi Payment Request OMS->Gateway thành Payment Authorization Request, đổi Delivery Order thành Delivery Order Manifest, sửa chiều + tên Payment report, tách 2 nhãn System Setting Information trùng nhau.
